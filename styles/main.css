@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    list-style: none;
+    text-transform: capitalize;
 }
 
 :root{
@@ -16,7 +18,8 @@
 
 .header{
 position: fixed;
-width: 100vw;
+top: 0;
+width: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -40,11 +43,14 @@ justify-content: space-between;
 
 }
 .item{
-    display: inline;
+    display: inline-block;
     color: #4a4a4a;
     font-size: 16px;
     margin: 10px 20px 13px;
-   
+    text-transform: uppercase;
+    font-family: var(--font-family);
+    padding: 5px 5px 5px 5px;
+
 }
 
 /*MAIN*/
@@ -60,26 +66,18 @@ justify-content: space-between;
 .item-main{
 display: block;
 text-align: center;
-font-family: var(--text-color-title);
+font-family: var(--font-family);
 color: var(--text-color-title);
 font-size: 30px;
 }
 
 
-@media all and (min-width 768px){
+@media all and (min-width:768px){
 
     .header {
-        flex-direction: column;
-
-
-
-
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 20px 20px 30px;
+        font-size: 40px;
     }
-
-
-
-
-
-
-
 }
